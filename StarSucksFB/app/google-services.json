@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "456102588033",
+    "firebase_url": "https://starsucks-40531.firebaseio.com",
+    "project_id": "starsucks-40531",
+    "storage_bucket": "starsucks-40531.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456102588033:android:7916562207d23c60",
+        "android_client_info": {
+          "package_name": "com.varsitycollege.ctill.starsucks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456102588033-ef3rjcvk5t0nq8qul4j70usl14cenp03.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.varsitycollege.ctill.starsucks",
+            "certificate_hash": "7633d0afe7a059042f52b71506acd6cc38200f48"
+          }
+        },
+        {
+          "client_id": "456102588033-3r59oju69titmgl6i0b4shbut6a47jek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2lrBH8rcf0wC_ElWxHk6oc-beSanLzOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456102588033-3r59oju69titmgl6i0b4shbut6a47jek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
