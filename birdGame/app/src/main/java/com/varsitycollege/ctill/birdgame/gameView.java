@@ -10,7 +10,15 @@ import android.graphics.Typeface;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+/**
+ * A view for the Bird Game
+ *
+ * This view displays the BirdGame.
+ *
+ * @author Sarina Till
+ * @version v0.1
 
+ */
 public class gameView extends View {
 
 
