@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrderDetails">
+
+
+    <ImageView
+        android:id="@+id/img_sslog"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/starsuckslogo">
+
+    </ImageView>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Who are you"
+        android:textColor="@color/starBucksGreen"
+        android:textColorHint="@color/starBucksGreen"
+        android:textSize="20sp">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/lbl_placedOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="You ordered"
+            android:textSize="20sp"
+            android:textColor="@color/starBucksGreen"
+            android:textColorHint="@color/starBucksGreen">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_placedOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:hint="You orderd"
+            android:textSize="20sp"
+            android:textColor="@color/starBucksGreen">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_date"
+        android:layout_width="192dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/date">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btn_shareOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Share Order"
+            android:textColor="@color/white"
+            android:background="@color/starBucksGreen">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_placeOrder"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Place Order"
+            android:textColor="@color/white"
+            android:background="@color/starBucksGreen">
+        </Button>
+
+    </LinearLayout>
+
+
+</LinearLayout>
