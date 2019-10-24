@@ -7,15 +7,75 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <ImageView
-        android:id="@+id/img_SSLogo"
-        android:layout_width="328dp"
-        android:layout_height="190dp"
-        android:src="@drawable/starsuckslogo"
-        android:layout_gravity="center">
+        android:id="@+id/img_sslog"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/starsuckslogo" />
 
-    </ImageView>
+    <TextView
+        android:id="@+id/tv_Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvOrder"
+        android:textColor="@color/starSucksGreen"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp">
 
+
+    </TextView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation = "vertical"
+            android:layout_width ="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img_sb1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb1" />
+
+            <ImageView
+                android:id="@+id/img_sb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb2" />
+
+
+            <ImageView
+                android:id="@+id/img_sb3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb3" />
+
+            <ImageView
+                android:id="@+id/img_sb4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb4" />
+
+            <ImageView
+                android:id="@+id/img_sb5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb5" />
+
+            <ImageView
+                android:id="@+id/img_sb6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb6" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

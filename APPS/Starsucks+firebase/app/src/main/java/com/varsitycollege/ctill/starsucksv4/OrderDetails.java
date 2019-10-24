@@ -33,11 +33,17 @@ public class OrderDetails extends AppCompatActivity {
 
 
     @Override
+    protected void onStart() {
+        super.onStart();
+
+        Toast.makeText(this, "I have started", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_details);
-
         firebaseOrder = new Order();
         name = findViewById(R.id.et_name);
         placedOrder = findViewById(R.id.tv_placedOrder);
@@ -46,6 +52,7 @@ public class OrderDetails extends AppCompatActivity {
         img_date = findViewById(R.id.img_date);
 
         order = getIntent().getStringExtra("order");
+
 
         placedOrder.setText(order);
         firebaseOrder.setPlacedOrder(order);
@@ -70,7 +77,8 @@ public class OrderDetails extends AppCompatActivity {
 
         datepickerlistner = new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day)
+            public void onDateSet(DatePicker datePicker, int year,
+                                  int month, int day)
             {
 
                 date = year+" "+ (month +1) +" "+day ;
@@ -105,6 +113,9 @@ public class OrderDetails extends AppCompatActivity {
                 myRef.push().setValue(firebaseOrder);
             }
         });
+
+
+
 
 
     }

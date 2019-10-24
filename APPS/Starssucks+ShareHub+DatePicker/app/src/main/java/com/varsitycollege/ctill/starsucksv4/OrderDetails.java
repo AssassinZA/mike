@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,10 +17,15 @@ import java.util.Calendar;
 public class OrderDetails extends AppCompatActivity {
 
     TextView placedOrder;
+    EditText name;
     Button btn_placeOrder,btn_shareOrder;
-    String order,date;
+    String order,date , userName;
     ImageView img_date;
+    Order firebaseOder;
     private DatePickerDialog.OnDateSetListener datepickerlistner;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("Orders");
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,14 +33,21 @@ public class OrderDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_details);
 
+        firebaseOder = new Order();
+
         placedOrder = findViewById(R.id.tv_placedOrder);
         btn_shareOrder = findViewById(R.id.btn_shareOrder);
         btn_placeOrder = findViewById(R.id.btn_placeOrder);
+        name = findViewById(R.id.et_name);
         img_date = findViewById(R.id.img_date);
 
         order = getIntent().getStringExtra("order");
 
         placedOrder.setText(order);
+        firebaseOder.setPlacedOrder(order);
+
+        userName = name.getText().toString();
+        firebaseOder.setUserName(userName);
 
 
         img_date.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +72,7 @@ public class OrderDetails extends AppCompatActivity {
             {
 
                 date = year+" "+ (month +1) +" "+day ;
+                firebaseOder.setDate(date);
 
             }
         };
@@ -73,6 +87,16 @@ public class OrderDetails extends AppCompatActivity {
 
                 Intent shareIntent = Intent.createChooser(sendIntent, null);
                 startActivity(shareIntent);
+
+            }
+        });
+
+
+        btn_placeOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
 
             }
         });

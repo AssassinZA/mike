@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Starsucks</string>
+    <string name="app_name" translatable="false">Starsucks</string>
+    <string name = "tvOrder" translatable="true">Order Me</string>
 </resources>

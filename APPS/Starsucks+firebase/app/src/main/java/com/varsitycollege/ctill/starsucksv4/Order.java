@@ -6,6 +6,20 @@ public class Order
     String date;
     String placedOrder;
 
+    public Order () {}
+
+    public Order (String userName, String date)
+    {
+        this.userName = userName;
+        this.date = date;
+    }
+
+    public Order(String userName, String date, String placedOrder) {
+        this.userName = userName;
+        this.date = date;
+        this.placedOrder = placedOrder;
+    }
+
     public String getUserName() {
         return userName;
     }
