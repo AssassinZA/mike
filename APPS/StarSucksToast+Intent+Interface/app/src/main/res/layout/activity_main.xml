@@ -14,6 +14,17 @@
         android:scaleType="centerInside"
         app:srcCompat="@drawable/starsuckslogo" />
 
+    <TextView
+        android:id="@+id/tv_Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/hind_guntur_light"
+        android:text="@string/starsucksLable"
+        android:textColor="@color/starbuckGreen"
+
+        android:textSize="30dp" />
+
 
     <ScrollView
         android:layout_width="match_parent"

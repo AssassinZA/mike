@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name ="starSucksGreen">#406e57</color>
+    <color name ="starSucksRed">#406e57</color>
+
 </resources>

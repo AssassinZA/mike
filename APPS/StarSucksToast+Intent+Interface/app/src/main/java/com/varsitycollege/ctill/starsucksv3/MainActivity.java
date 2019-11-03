@@ -2,7 +2,6 @@ package com.varsitycollege.ctill.starsucksv3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,8 +10,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
     ImageView img_Sb1,img_Sb2,img_Sb3,img_Sb4,img_Sb5,img_Sb6;
-    String order;
-    Function function;
+    IntentHelper intentHelper;
+    Order order;
 
 
     @Override
@@ -20,7 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        function = new Function();
+        intentHelper = new IntentHelper();
+        order = new Order();
 
         img_Sb1 = findViewById(R.id.img_sb1);
         img_Sb2 = findViewById(R.id.img_sb2);
@@ -45,38 +45,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.img_sb1:
                 Toast.makeText(this, "Soy Frappe", Toast.LENGTH_SHORT).show();
-                order="Soy Frappe";
-                function.openIntent(this,order);
+                order.setProductName("Soy Frappe");
+                intentHelper.openIntent(this,order.getProductName(),OrderDetails.class);
                 break;
 
             case R.id.img_sb2:
                 Toast.makeText(this, "Chocolate Frappe", Toast.LENGTH_SHORT).show();
-                order = "Chocolate Frappe";
-                function.openIntent(this,order);
+                order.setProductName("Chocolate Frappe");
+                intentHelper.openIntent(this,order.getProductName(), OrderDetails.class);
                 break;
 
             case R.id.img_sb3:
                 Toast.makeText(this, "Bottled Frappe", Toast.LENGTH_SHORT).show();
-                order = "Bottled Frappe";
-                function.openIntent(this,order);
+                order.setProductName("Bottled Frappe");
+                intentHelper.openIntent(this,order.getProductName(),OrderDetails.class);
                 break;
 
             case R.id.img_sb4:
                 Toast.makeText(this, "Rainbow Frappe", Toast.LENGTH_SHORT).show();
-                order = "Rainbow";
-                function.openIntent(this,order);
+                order.setProductName("Rainbow");
+                intentHelper.openIntent(this,order.getProductName(),OrderDetails.class);
                 break;
 
             case R.id.img_sb5:
                 Toast.makeText(this, "Black Forest Frappe", Toast.LENGTH_SHORT).show();
-                order ="Black Forest Frappe";
-                function.openIntent(this,order);
+                order.setProductName("Black Forest Frappe");
+                intentHelper.openIntent(this,order.getProductName(),OrderDetails.class);
                 break;
 
             case R.id.img_sb6:
                 Toast.makeText(this, "Christmas Frappe", Toast.LENGTH_SHORT).show();
-                order ="Christmas Frappe";
-                function.openIntent(this,order);
+                order.setProductName("Christmas Frappe");
+                intentHelper.openIntent(this,order.getProductName(),OrderDetails.class);
                 break;
         }
 
